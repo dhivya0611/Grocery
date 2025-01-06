@@ -1,0 +1,50 @@
+import java.util.*;
+public class grocery{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        float total=0;
+        float amount=0;
+        System.out.println("Welcome to Noothanam SuperMarket");
+        System.out.println("");
+        System.out.println("Items available in the super market");
+        System.out.println("1.blackgram");
+        System.out.println("2.greengram");
+        System.out.println("3.brush");
+        System.out.println("4.oil");
+        System.out.println("enter total number of item you want:");
+        int item=sc.nextInt();
+        for(int i=1;i<=item;i++){
+            System.out.println("enter the num corresponding to the item");
+            int n=sc.nextInt();
+            if(n==1){
+                System.out.println("enter the kg");
+                int quantity=sc.nextInt();
+                int blackgram=30;
+                amount=blackgram*quantity;
+            }
+            else if(n==2){
+                System.out.println("enter the kg");
+                int quantity=sc.nextInt();
+                int greengram=25;
+                amount=greengram*quantity;
+            }
+            else if(n==3){
+                System.out.println("enter the number of brush");
+                int quantity=sc.nextInt();
+                int brush=12;
+                amount=brush*quantity;
+            }
+            else if(n==4){
+                System.out.println("enter the liter");
+                int quantity=sc.nextInt();
+                int oil=40;
+                amount=oil*quantity;
+            }
+            else{
+                System.out.println("enter valid number");
+            }
+          total+=amount;
+          System.out.println("Total amount need to pay :"+total);
+        }
+    }
+}
